@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div class="container" *ngIf="!isLogged">
+  <div class="row m-4">
+    <div class="col col-md-8 mx-auto">
+      <div class="card">
+        <div class="card-header text-center">
+          Inicio de sesión
+        </div>
+        <div class="card-body">
+          <form class=" p-4">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <label for="floatingInput">Dirección de email</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-3">
+              <button type="submit" class="btn btn-primary btn-lg">Iniciar</button>
+            </div>
+
+          </form>
+
+          <div class="d-grid gap-2 col-6 mx-auto mt-3">
+            <button class="btn btn-outline-danger btn-lg btn-block" (click)="signInWithGoogle()">
+              <i class="fab fa-google"></i> Iniciar Sesión con Google</button>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto mt-3">
+            <button class="btn btn-outline-primary btn-lg btn-block" (click)="signInWithFB()">
+              <i class="fab fa-facebook"></i> Iniciar Sesión con Facebook</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
